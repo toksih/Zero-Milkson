@@ -1,3 +1,6 @@
+/* ==========================
+   Global
+========================== */
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
@@ -17,8 +20,12 @@ body {
     color: var(--chocolate);
     background-color: #fff;
     overflow-x: hidden;
+    max-width: 100vw;
 }
 
+/* ==========================
+   Navbar
+========================== */
 .custom-nav {
     background: #ffffff;
     border-bottom: 3px solid var(--rosa-bg);
@@ -60,6 +67,9 @@ body {
     width: 100%;
 }
 
+/* ==========================
+   Hero Section
+========================== */
 .hero-section {
     background-color: var(--rosa-bg);
     padding: 80px 0;
@@ -74,6 +84,25 @@ body {
     color: var(--vermelho);
 }
 
+/* Hero Images Responsivas */
+.img-mod-1, /* vaquinha */
+.img-mod-2  /* sorvete */ {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    transform: rotate(-2deg); /* pode ajustar */
+    margin-top: 0;
+}
+
+.img-mod-2 {
+    max-width: 270px;
+    transform: rotate(3deg);
+    margin-top: 60px;
+}
+
+/* ==========================
+   Promo Cards
+========================== */
 .promo-card {
     background: #fff;
     padding: 30px;
@@ -99,6 +128,9 @@ body {
     border-radius: 4px;
 }
 
+/* ==========================
+   Buttons
+========================== */
 .btn-main-action {
     background: var(--vermelho);
     color: #fff;
@@ -134,6 +166,9 @@ body {
     border-color: var(--vermelho);
 }
 
+/* ==========================
+   Square Frame
+========================== */
 .square-frame {
     background: #fff;
     padding: 15px;
@@ -141,27 +176,6 @@ body {
     box-shadow: 0 15px 35px rgba(0, 0, 0, .1);
     position: relative;
     border: 1px solid #eee;
-}
-
-
-.img-mod-1,
-.img-mod-2 {
-    width: auto;
-    max-width: 320px;
-    height: auto;
-    transform: none;
-}
-
-
-@media (max-width: 991px) {
-
-    .img-mod-1,
-    .img-mod-2 {
-        width: 90%;
-        height: auto;
-        margin-top: 20px;
-        transform: none;
-    }
 }
 
 .square-frame img {
@@ -184,6 +198,9 @@ body {
     white-space: nowrap;
 }
 
+/* ==========================
+   Partner Cards
+========================== */
 .partner-card {
     background: #fff;
     border-radius: 20px;
@@ -215,6 +232,9 @@ body {
     border-radius: 50px;
 }
 
+/* ==========================
+   Section Titles
+========================== */
 .section-title {
     font-weight: 700;
     font-size: 2.8rem;
@@ -224,10 +244,9 @@ body {
     color: var(--vermelho);
 }
 
-.bg-cream {
-    background-color: var(--creme);
-}
-
+/* ==========================
+   Other Cards
+========================== */
 .ice-card {
     border: none;
     border-radius: 25px;
@@ -248,6 +267,9 @@ body {
     box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
 }
 
+/* ==========================
+   Footer
+========================== */
 .footer-ice {
     background: var(--vermelho);
     border-top: 8px solid var(--vermelho-dark);
@@ -287,85 +309,9 @@ body {
     margin: 30px 0;
 }
 
-@media(max-width:991px) {
-    .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .img-mod-1,
-    .img-mod-2 {
-        width: 100%;
-        height: 350px;
-        transform: none;
-        margin-top: 20px;
-    }
-}
-
-
-@media (max-width: 767px) {
-
-    .hero-title {
-        font-size: 2rem;
-        text-align: center;
-    }
-
-    .hero-text {
-        text-align: center;
-        padding-bottom: 20px;
-    }
-
-
-    .hero-text .d-flex {
-        justify-content: center;
-        flex-direction: column;
-        gap: 10px !important;
-    }
-
-    .hero-gallery {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px !important;
-    }
-
-    .img-mod-1,
-    .img-mod-2 {
-        width: 90% !important;
-        height: 300px !important;
-        margin-top: 10px !important;
-        transform: none !important;
-    }
-
-
-    .section-title {
-        font-size: 1.8rem;
-    }
-
-    .promo-card {
-        text-align: left;
-        padding: 20px;
-    }
-
-    .promo-card h4 {
-        font-size: 1.4rem;
-    }
-
-    .promo-text {
-        font-size: 1.1rem;
-    }
-}
-
-.card-img-top {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-body {
-    max-width: 100vw;
-    overflow-x: hidden;
-}
-
-
+/* ==========================
+   Cards Section
+========================== */
 .cards-container {
     display: flex;
     flex-wrap: wrap;
@@ -373,7 +319,6 @@ body {
     gap: 20px;
     padding: 10px;
 }
-
 
 .card {
     flex: 0 1 300px;
@@ -402,7 +347,6 @@ body {
     display: block;
 }
 
-
 .card-content {
     flex: 1;
     display: flex;
@@ -411,7 +355,9 @@ body {
     margin-top: 10px;
 }
 
-
+/* ==========================
+   Media Queries
+========================== */
 @media (max-width: 1024px) {
     .card {
         flex: 0 1 calc(50% - 20px);
@@ -424,8 +370,56 @@ body {
     }
 }
 
+@media (max-width: 991px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
 
-@media (max-width: 600px) {
+    .img-mod-1,
+    .img-mod-2 {
+        width: 90%;
+        max-width: none;
+        height: auto;
+        margin-top: 20px;
+        transform: none;
+    }
+
+    .promo-card {
+        padding: 20px;
+    }
+
+    .promo-card h4 {
+        font-size: 1.4rem;
+    }
+
+    .promo-text {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .hero-text {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .hero-text .d-flex {
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px !important;
+    }
+
+    .hero-gallery {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px !important;
+    }
+
     .card {
         flex: 0 1 100%;
         max-width: 100%;
