@@ -434,4 +434,23 @@ body {
         font-size: 0.9rem;
     }
 }
+.ice-card {
+    transition: all 0.3s ease;
+    border: none;
+    overflow: hidden;
+}
+.ice-card:hover {
+    background-color: #dc3545; 
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.ice-card:hover .product-name,
+.ice-card:hover .price-tag {
+    color: #ffffff !important;
+}
+.ice-card:hover .btn-main-action {
+    background-color: #ffffff;
+    color: #dc3545;
+    border-color: #ffffff;
+}
 
